@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitiku Etafa | Zenith Developer Dashboard v2.0</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Mitiku Etafa</div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Exploring the <span>Dimensions</span> of Web Development</h1>
+                <p>I craft unique digital experiences with cutting-edge technologies. My portfolio is not just a
+                    showcase, but an interactive journey through my skills in CSS, HTML, JavaScript, React, Node.js,
+                    PHP, MySQL, and more.</p>
+                <a href="#projects" class="btn">Explore My Work</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- Placeholder for profile picture -->
+                    <div class="photo-placeholder" id="profile-display">
+                        <i class="fas fa-camera"></i>
+                        <p>ID_AUTH: MITIKU_E</p>
+                    </div>
+                    <!-- Upload Icon Badge -->
+                    <div class="upload-badge" title="Upload Profile Picture"
+                        onclick="document.getElementById('profile-upload').click()">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <input type="file" id="profile-upload" accept="image/*" style="display: none;">
+                    <div class="orb-ring"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">My Tech Universe</h2>
+            <div class="skills-visual">
+                <div class="skill-orb floating" style="animation-delay: 0s;">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 0.2s;">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 0.4s;">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 0.6s;">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 0.8s;">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 1s;">
+                    <i class="fab fa-php"></i>
+                    <span>PHP</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 1.2s;">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 1.4s;">
+                    <i class="fab fa-java"></i>
+                    <span>Java</span>
+                </div>
+                <div class="skill-orb floating" style="animation-delay: 1.6s;">
+                    <i class="fas fa-cubes"></i>
+                    <span>More</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Technical Ventures</h2>
+            <div class="cube-container">
+                <!-- Project Cube 1: University Grade Portal -->
+                <div class="project-cube">
+                    <div class="cube-face cube-front">
+                        <i class="fas fa-university"></i>
+                        <h3>EduLink Portal</h3>
+                        <p>Academic Management</p>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <h3>Grade Portal</h3>
+                        <p>A university-grade academic management system featuring real-time tracking, course
+                            registration, and automated GPA calculation.</p>
+                        <a href="https://github.com/mitihans-1/university-grade-portal" class="btn"
+                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Project Cube 2: Online Market -->
+                <div class="project-cube">
+                    <div class="cube-face cube-front">
+                        <i class="fas fa-store"></i>
+                        <h3>Online Market</h3>
+                        <p>E-Commerce Engine</p>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <h3>Online Market</h3>
+                        <p>Premium marketplace platform with real-time inventory, local payment integration, and a
+                            highly scalable backend architecture.</p>
+                        <a href="https://github.com/mitihans-1/MarketLink-Online-Marketing" class="btn"
+                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    </div>
+                </div>
+
+                <!-- Project Cube 3: Task API -->
+                <div class="project-cube">
+                    <div class="cube-face cube-front">
+                        <i class="fas fa-server"></i>
+                        <h3>Task Core API</h3>
+                        <p>Backend Logic</p>
+                    </div>
+                    <div class="cube-face cube-back">
+                        <h3>Task Core</h3>
+                        <p>High-performance Java microservices managing distributed tasks with JWT security and
+                            comprehensive
+                            documentation.</p>
+                        <a href="https://github.com/mitik/task-core" class="btn"
+                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">My Development Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">Current</div>
+                        <h3>Full Stack Developer</h3>
+                        <p>Scaling complex web ecosystems and refining high-concurrency backend architectures.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">Phase 2</div>
+                        <h3>E-Commerce & Portals</h3>
+                        <p>Developed university-grade academic portals and commercial marketplaces for global use.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="date">Genesis</div>
+                        <h3>Technical Research</h3>
+                        <p>Mastered core technologies including Java, Node.js, PHP, and modern frontend frameworks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Initialize Link</h3>
+                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">Whether you're looking for an engineer for your
+                        next system or just want to discuss high-level architecture, my terminal is open.</p>
+                    <div style="margin-top: 2rem;">
+                        <p><i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i>
+                            hello@mitiku.dev</p>
+                        <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt"
+                                style="color: var(--primary); margin-right: 10px;"></i> Global Remote</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="from_name" class="form-control" placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="reply_to" class="form-control"
+                                placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="Describe your project or inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;" id="submitBtn">
+                            <span id="btnText">Transmit Message</span>
+                            <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+                        </button>
+                    </form>
+                    <div id="formStatus"
+                        style="margin-top: 15px; text-align: center; font-weight: 600; font-size: 0.9rem; display: none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/mitihans-1" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/Mitiku Etafa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/mitihans22" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>© 2026 Mitiku Etafa. All professional dimensions optimized.</p>
+    </footer>
+
+
+    <!-- Image Adjustment Modal -->
+    <div class="modal-overlay" id="uploadModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3><i class="fas fa-crop-alt"></i> Adjust Profile Picture</h3>
+                <button class="close-modal" id="closeUploadModal">&times;</button>
+            </div>
+            <div class="modal-content">
+                <div class="preview-area">
+                    <div class="image-preview-container">
+                        <img id="imagePreview" src="" alt="Preview">
+                    </div>
+                    <div class="adjustment-controls">
+                        <div class="control-group">
+                            <h4><i class="fas fa-search-plus"></i> Zoom Level</h4>
+                            <div class="zoom-controls">
+                                <button class="zoom-btn" id="zoomOut"><i class="fas fa-minus"></i></button>
+                                <input type="range" class="zoom-slider" id="zoomSlider" min="1" max="3" step="0.1"
+                                    value="1">
+                                <button class="zoom-btn" id="zoomIn"><i class="fas fa-plus"></i></button>
+                                <span class="zoom-value" id="zoomValue">100%</span>
+                            </div>
+                        </div>
+
+                        <div class="control-group">
+                            <h4><i class="fas fa-arrows-alt"></i> Position Reference</h4>
+                            <div class="position-grid">
+                                <button class="pos-btn" data-pos="top-left">↖</button>
+                                <button class="pos-btn" data-pos="top-center">↑</button>
+                                <button class="pos-btn" data-pos="top-right">↗</button>
+                                <button class="pos-btn" data-pos="middle-left">←</button>
+                                <button class="pos-btn active" data-pos="center">⊙</button>
+                                <button class="pos-btn" data-pos="middle-right">→</button>
+                                <button class="pos-btn" data-pos="bottom-left">↙</button>
+                                <button class="pos-btn" data-pos="bottom-center">↓</button>
+                                <button class="pos-btn" data-pos="bottom-right">↘</button>
+                            </div>
+                            <p class="drag-instruction">Tip: You can also drag the image to adjust</p>
+                        </div>
+
+                        <div class="control-buttons">
+                            <button id="resetProfileBtn"><i class="fas fa-undo"></i> Reset</button>
+                            <button id="saveProfileBtn"><i class="fas fa-check"></i> Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="port.js"></script>
+</body>
+
+</html>
