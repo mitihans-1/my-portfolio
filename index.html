@@ -20,6 +20,7 @@
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -43,8 +44,8 @@
                 <div class="image-wrapper">
                     <!-- Placeholder for profile picture -->
                     <div class="photo-placeholder" id="profile-display">
-                        <i class="fas fa-camera"></i>
-                        <p>ID_AUTH: MITIKU_E</p>
+                        <img src="photo.jpg" alt="Mitiku Etafa"
+                            style="width: 100%; height: auto; display: block; border-radius: 50%;">
                     </div>
                     <!-- Upload Icon Badge -->
                     <div class="upload-badge" title="Upload Profile Picture"
@@ -54,6 +55,51 @@
                     <input type="file" id="profile-upload" accept="image/*" style="display: none;">
                     <div class="orb-ring"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+
+                <!-- Education Item 1 -->
+                <div class="education-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <div>
+                                <h3>Bachelor's Degree in Software Engineering</h3>
+                                <p class="edu-institution">Dire Dawa University</p>
+                            </div>
+                            <span class="edu-timeline">2020 - 2024</span>
+                        </div>
+                        <p class="edu-description">Specialized in Software Engineering, Database Systems, and Web
+                            Technologies</p>
+                    </div>
+                </div>
+
+                <!-- Education Item 2 -->
+                <div class="education-item">
+                    <div class="edu-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-header">
+                            <div>
+                                <h3>Full Stack Web Development</h3>
+                                <p class="edu-institution">Online Certification</p>
+                            </div>
+                            <span class="edu-timeline">2024 - 2025</span>
+                        </div>
+                        <p class="edu-description">Advanced training in React, Node.js, and modern web architecture</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -106,56 +152,92 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">My Technical Ventures</h2>
-            <div class="cube-container">
-                <!-- Project Cube 1: University Grade Portal -->
-                <div class="project-cube">
-                    <div class="cube-face cube-front">
-                        <i class="fas fa-university"></i>
-                        <h3>EduLink Portal</h3>
-                        <p>Academic Management</p>
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Project Card 1: University Grade Portal -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>University Grade Portal</h3>
+                        <div class="project-links">
+                            <a href="https://university-grade-portal.vercel.app" target="_blank" class="project-link"
+                                title="View Website">
+                                <i class="fas fa-globe"></i> Website
+                            </a>
+                            <a href="https://github.com/mitihans-1/university-grade-portal" target="_blank"
+                                class="project-link" title="View Source">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
                     </div>
-                    <div class="cube-face cube-back">
-                        <h3>Grade Portal</h3>
-                        <p>A university-grade academic management system featuring real-time tracking, course
-                            registration, and automated GPA calculation.</p>
-                        <a href="https://github.com/mitihans-1/university-grade-portal" class="btn"
-                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    <div class="project-timeline">Jan 2024 - Present</div>
+                    <p class="project-description">
+                        A university-grade academic management system featuring real-time grade tracking,
+                        course registration, automated GPA calculation, and faculty management dashboard.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java Spring</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Redis</span>
                     </div>
                 </div>
 
-                <!-- Project Cube 2: Online Market -->
-                <div class="project-cube">
-                    <div class="cube-face cube-front">
-                        <i class="fas fa-store"></i>
-                        <h3>Online Market</h3>
-                        <p>E-Commerce Engine</p>
+                <!-- Project Card 2: Online Market -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>MarketLink</h3>
+                        <div class="project-links">
+                            <a href="https://market-link-online-marketing.vercel.app" target="_blank"
+                                class="project-link" title="View Website">
+                                <i class="fas fa-globe"></i> Website
+                            </a>
+                            <a href="https://github.com/mitihans-1/MarketLink-Online-Marketing" target="_blank"
+                                class="project-link" title="View Source">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
                     </div>
-                    <div class="cube-face cube-back">
-                        <h3>Online Market</h3>
-                        <p>Premium marketplace platform with real-time inventory, local payment integration, and a
-                            highly scalable backend architecture.</p>
-                        <a href="https://github.com/mitihans-1/MarketLink-Online-Marketing" class="btn"
-                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    <div class="project-timeline">June 2023 - Present</div>
+                    <p class="project-description">
+                        Premium e-commerce marketplace platform with real-time inventory management,
+                        local payment gateway integration, and highly scalable microservices architecture.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">TailwindCSS</span>
                     </div>
                 </div>
 
-                <!-- Project Cube 3: Task API -->
-                <div class="project-cube">
-                    <div class="cube-face cube-front">
-                        <i class="fas fa-server"></i>
+                <!-- Project Card 3: Task Core API -->
+                <div class="project-card">
+                    <div class="project-header">
                         <h3>Task Core API</h3>
-                        <p>Backend Logic</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mitik/task-core" target="_blank" class="project-link"
+                                title="View Source">
+                                <i class="fab fa-github"></i> Source
+                            </a>
+                        </div>
                     </div>
-                    <div class="cube-face cube-back">
-                        <h3>Task Core</h3>
-                        <p>High-performance Java microservices managing distributed tasks with JWT security and
-                            comprehensive
-                            documentation.</p>
-                        <a href="https://github.com/mitik/task-core" class="btn"
-                            style="padding: 0.5rem 1.5rem; font-size: 0.8rem;" target="_blank">View Repository</a>
+                    <div class="project-timeline">Mar 2023 - Aug 2023</div>
+                    <p class="project-description">
+                        High-performance Java microservices for distributed task management with JWT authentication,
+                        comprehensive API documentation, and real-time monitoring capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JWT</span>
+                        <span class="tech-tag">Swagger</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -193,17 +275,57 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-container">
+            <h2 class="section-title">Get in Touch</h2>
+
+            <div class="contact-container" style="margin-top: 4rem;">
                 <div class="contact-info">
-                    <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">Initialize Link</h3>
-                    <p style="margin-bottom: 1.5rem; line-height: 1.6;">Whether you're looking for an engineer for your
-                        next system or just want to discuss high-level architecture, my terminal is open.</p>
-                    <div style="margin-top: 2rem;">
-                        <p><i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i>
-                            hello@mitiku.dev</p>
-                        <p style="margin-top: 10px;"><i class="fas fa-map-marker-alt"
-                                style="color: var(--primary); margin-right: 10px;"></i> Global Remote</p>
+                    <h3
+                        style="font-size: 2.8rem; font-weight: 800; margin-bottom: 2rem; background: linear-gradient(to right, #fff, #b8b8d1); -webkit-background-clip: text; background-clip: text; color: transparent;">
+                        Get in Touch</h3>
+                    <p
+                        style="font-size: 1.1rem; line-height: 1.8; color: #b8b8d1; margin-bottom: 2.5rem; max-width: 500px;">
+                        Want to chat? Just shoot me a message on
+                        <a href="https://twitter.com/mitihans22" target="_blank" class="social-link"
+                            style="color: var(--primary); font-weight: 600; text-decoration: none;">Twitter</a>
+                        or <a href="https://linkedin.com/in/Mitiku Etafa" target="_blank" class="social-link"
+                            style="color: var(--primary); font-weight: 600; text-decoration: none;">LinkedIn</a>
+                        and I'll respond whenever I can.
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 3rem;">
+                        <p style="display: flex; align-items: center; gap: 15px; font-size: 1.1rem; color: #fff;">
+                            <span
+                                style="width: 40px; height: 40px; border-radius: 50%; background: rgba(108, 99, 255, 0.1); display: flex; align-items: center; justify-content: center; color: var(--primary);">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            mitikumitihans@gmail.com
+                        </p>
+                        <p style="display: flex; align-items: center; gap: 15px; font-size: 1.1rem; color: #fff;">
+                            <span
+                                style="width: 40px; height: 40px; border-radius: 50%; background: rgba(54, 209, 220, 0.1); display: flex; align-items: center; justify-content: center; color: var(--secondary);">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            Global Remote
+                        </p>
+                    </div>
+
+                    <div class="social-icons-row" style="justify-content: flex-start; gap: 1rem;">
+                        <a href="https://github.com/mitihans-1" target="_blank" class="social-icon"
+                            style="width: 50px; height: 50px;">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/Mitiku Etafa" target="_blank" class="social-icon"
+                            style="width: 50px; height: 50px;">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com/mitihans22" target="_blank" class="social-icon"
+                            style="width: 50px; height: 50px;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/mitihans22" target="_blank" class="social-icon"
+                            style="width: 50px; height: 50px;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -238,11 +360,6 @@
 
     <!-- Footer -->
     <footer>
-        <div class="social-links">
-            <a href="https://github.com/mitihans-1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/Mitiku Etafa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://instagram.com/mitihans22" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
         <p>© 2026 Mitiku Etafa. All professional dimensions optimized.</p>
     </footer>
 

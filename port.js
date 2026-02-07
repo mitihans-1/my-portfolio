@@ -136,13 +136,6 @@ const scrollObserver = new IntersectionObserver((entries) => {
 
 sections.forEach(section => scrollObserver.observe(section));
 
-// Handle project cube focus for accessibility/mobile
-document.querySelectorAll('.project-cube').forEach(cube => {
-    cube.addEventListener('touchstart', function () {
-        this.classList.toggle('flipped');
-    });
-});
-
 // --- Profile Picture Adjustment Engine ---
 const profileUpload = document.getElementById('profile-upload');
 const profileDisplay = document.getElementById('profile-display');
