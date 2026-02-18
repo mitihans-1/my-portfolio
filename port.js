@@ -57,27 +57,29 @@ if (contactForm) {
         const name = formData.get('from_name');
 
         try {
-            // NOTE: Replace the URL below with your real Formspree or custom API endpoint after deployment
-            // Example: https://formspree.io/f/your_form_id
-            const response = await fetch('https://formspree.io/f/placeholder', {
+            // STEP 1: We use your real Formspree endpoint here
+            const response = await fetch('https://formspree.io/f/mwvnbblg', {
                 method: 'POST',
                 body: formData,
                 headers: { 'Accept': 'application/json' }
             });
 
-            if (response.ok || true) { // Forced true for local testing visibility
+            // STEP 2: We removed the "|| true" so it only shows success if it actually works
+            if (response.ok) {
                 formStatus.style.color = "#4ade80"; // Bright Green
-                formStatus.innerHTML = `<i class="fas fa-check-circle"></i> Connection established. Thank you ${name}, your message has been successfully transmitted to Mitiku's secure server.`;
+                formStatus.innerHTML = `<i class="fas fa-check-circle"></i> Connection established. Thank you ${name}, your internship offer has been successfully transmitted.`;
                 contactForm.reset();
             } else {
-                throw new Error();
+                const data = await response.json();
+                throw new Error(data.error || "Form submission failed");
             }
         } catch (error) {
             formStatus.style.color = "#ff4d4d"; // Error Red
-            formStatus.textContent = "TRANSMISSION_ERROR: Check your connection and try again.";
+            formStatus.textContent = "TRANSMISSION_ERROR: " + (error.message || "Check your connection and try again.");
         } finally {
             submitBtn.disabled = false;
             btnText.textContent = "Transmit Message";
+            // Hide the status message after 8 seconds
             setTimeout(() => { formStatus.style.display = "none"; }, 8000);
         }
     });
