@@ -1019,6 +1019,8 @@ footer {
 
     .menu-btn {
         display: block;
+        z-index: 1100;
+        position: relative;
     }
 
     .hero h1 {
@@ -1486,8 +1488,8 @@ footer {
 
 .collab-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     margin-top: 4rem;
 }
 
