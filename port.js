@@ -295,21 +295,25 @@ const cursor = document.getElementById('customCursor');
 if (cursor && window.matchMedia('(pointer: fine)').matches) {
     document.addEventListener('mousemove', (e) => {
         cursor.style.opacity = '1';
-        cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+        // 15px is half of the 30px cursor width
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursor.style.transform = `translate(-50%, -50%)`;
     });
 
     // Cursor interaction with links and buttons
-    document.querySelectorAll('a, button, .skill-orb, .project-card, .collab-card').forEach(el => {
+    document.querySelectorAll('a, button, .skill-orb, .project-card, .collab-card, .upload-badge').forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.width = '50px';
-            cursor.style.height = '50px';
-            cursor.style.transform += ' translate(-15px, -15px)';
-            cursor.style.background = 'white';
+            cursor.style.width = '60px';
+            cursor.style.height = '60px';
+            cursor.style.background = 'rgba(138, 132, 255, 0.1)';
+            cursor.style.borderColor = 'var(--secondary)';
         });
         el.addEventListener('mouseleave', () => {
-            cursor.style.width = '20px';
-            cursor.style.height = '20px';
-            cursor.style.background = 'var(--primary)';
+            cursor.style.width = '30px';
+            cursor.style.height = '30px';
+            cursor.style.background = 'transparent';
+            cursor.style.borderColor = 'var(--primary)';
         });
     });
 }
