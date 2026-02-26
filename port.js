@@ -290,30 +290,4 @@ window.addEventListener('scroll', () => {
     document.getElementById('scrollProgress').style.width = scrolled + '%';
 });
 
-// Custom Cursor Logic
-const cursor = document.getElementById('customCursor');
-if (cursor && window.matchMedia('(pointer: fine)').matches) {
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.opacity = '1';
-        // 15px is half of the 30px cursor width
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursor.style.transform = `translate(-50%, -50%)`;
-    });
 
-    // Cursor interaction with links and buttons
-    document.querySelectorAll('a, button, .skill-orb, .project-card, .collab-card, .upload-badge').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.width = '60px';
-            cursor.style.height = '60px';
-            cursor.style.background = 'rgba(138, 132, 255, 0.1)';
-            cursor.style.borderColor = 'var(--secondary)';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursor.style.width = '30px';
-            cursor.style.height = '30px';
-            cursor.style.background = 'transparent';
-            cursor.style.borderColor = 'var(--primary)';
-        });
-    });
-}
