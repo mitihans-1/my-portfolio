@@ -16,10 +16,16 @@
     --glass-border: rgba(255, 255, 255, 0.08);
 }
 
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     background-color: var(--dark);
     color: var(--light);
-    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -893,12 +899,12 @@ nav a.active {
 
 .contact-info {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .contact-form {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     background: rgba(255, 255, 255, 0.05);
     padding: 2.5rem;
     border-radius: 15px;
@@ -1494,7 +1500,7 @@ footer {
 
 .collab-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     margin-top: 4rem;
 }
