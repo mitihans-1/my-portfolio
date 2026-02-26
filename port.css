@@ -68,6 +68,9 @@ header {
     background-clip: text;
     color: transparent;
     letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 nav ul {
@@ -1045,6 +1048,7 @@ footer {
         padding: 5px 10px;
         border-radius: 5px;
         backdrop-filter: blur(5px);
+        cursor: pointer;
     }
 
     .hero h1 {
@@ -1605,6 +1609,15 @@ footer {
     }
 
     .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header {
         justify-content: center;
     }
 
