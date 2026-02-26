@@ -305,7 +305,13 @@ nav a.active {
     text-decoration: none;
     transition: var(--transition);
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(138, 132, 255, 0.3);
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn:hover {
@@ -1569,5 +1575,18 @@ footer {
 @media (max-width: 768px) {
     .collaboration-section {
         padding: 5rem 0;
+    }
+
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav {
+        width: 0;
+        height: 0;
+    }
+
+    .hero-btns {
+        justify-content: center;
     }
 }
