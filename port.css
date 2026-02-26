@@ -23,6 +23,39 @@ body {
     width: 100%;
     position: relative;
     max-width: 100vw;
+    scroll-behavior: smooth;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+    z-index: 2001;
+    transition: width 0.1s;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease-out, opacity 0.3s;
+    opacity: 0;
+}
+
+@media (pointer: coarse) {
+    .custom-cursor {
+        display: none;
+    }
 }
 
 body {
@@ -524,6 +557,17 @@ nav a.active {
 .skill-orb span {
     font-weight: 600;
     font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.skills-visual::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 132, 255, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(50px);
 }
 
 /* Modern Projects Grid */
@@ -753,10 +797,18 @@ nav a.active {
 }
 
 .timeline-content {
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    border-left: 3px solid var(--primary);
+    padding: 25px;
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+}
+
+.timeline-item:hover .timeline-content {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(138, 132, 255, 0.1);
 }
 
 .timeline-content h3 {

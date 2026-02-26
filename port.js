@@ -282,3 +282,34 @@ window.addEventListener('load', () => {
 });
 
 
+// Scroll Progress Bar Logic
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById('scrollProgress').style.width = scrolled + '%';
+});
+
+// Custom Cursor Logic
+const cursor = document.getElementById('customCursor');
+if (cursor && window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.opacity = '1';
+        cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+    });
+
+    // Cursor interaction with links and buttons
+    document.querySelectorAll('a, button, .skill-orb, .project-card, .collab-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.width = '50px';
+            cursor.style.height = '50px';
+            cursor.style.transform += ' translate(-15px, -15px)';
+            cursor.style.background = 'white';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.width = '20px';
+            cursor.style.height = '20px';
+            cursor.style.background = 'var(--primary)';
+        });
+    });
+}
