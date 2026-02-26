@@ -67,7 +67,7 @@ if (contactForm) {
             // STEP 2: We removed the "|| true" so it only shows success if it actually works
             if (response.ok) {
                 formStatus.style.color = "#4ade80"; // Bright Green
-                formStatus.innerHTML = `<i class="fas fa-check-circle"></i> Connection established. Thank you ${name}, your internship offer has been successfully transmitted.`;
+                formStatus.innerHTML = `<i class="fas fa-check-circle"></i> Connection established. Thank you ${name}, your message has been transmitted. I'm looking forward to our potential collaboration!`;
                 contactForm.reset();
             } else {
                 const data = await response.json();
